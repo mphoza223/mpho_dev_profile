@@ -232,4 +232,53 @@
    */
   new PureCounter();
 
+
+  //*************************************************************************************************************************
+
+  // const sendMsgBtn = document.querySelector('#sendMsgBtn'); // select the button element
+  // let thisForm = document.querySelectorAll('.php-email-form')
+
+  // sendMsgBtn.addEventListener('click', (e) => { // add a click event listener
+  //   e.preventDefault();
+
+  //     const msgBundle = {}
+
+  //     msgBundle.name = document.getElementById("name").value;
+  //     msgBundle.email = document.getElementById("email").value;
+  //     msgBundle.subject = document.getElementById("subject").value;
+  //     msgBundle.message = document.getElementById("message").value;
+
+  //     // sendMsgBtn.disabled = true;
+  //     console.log(msgBundle);
+
+  //     $.ajax({
+  //             url: 'http://127.0.0.1:3000/request',
+  //             data: msgBundle,
+  //             type: 'POST'
+  //         }).then(response => {
+  //           console.log(response);
+  //       if( response.ok ) {
+  //         return response.text();
+  //       } else {
+  //         throw new Error(`${response.status} ${response.statusText} ${response.url}`); 
+  //       }
+  //     })
+  //     .then(data => {
+  //       thisForm.querySelector('.loading').classList.remove('d-block');
+  //       if (data.trim() == 'OK') {
+  //         thisForm.querySelector('.sent-message').classList.add('d-block');
+  //         thisForm.reset(); 
+  //       } else {
+  //         throw new Error(data ? data : 'Form submission failed and no error message returned from: ' + action); 
+  //       }
+  //     })
+  //     .catch((error) => {
+  //       displayError(thisForm, error);
+  //     });
+
+  // });
+
 })()
+
+
+

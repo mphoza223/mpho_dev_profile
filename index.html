@@ -18,7 +18,7 @@
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
+  <link rel="stylesheet" type="text/css" href="assets/css/spinner.css">
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
@@ -33,6 +33,12 @@
 </head>
 
 <body>
+  <div class="overlay"></div>
+  <div class="spanner">
+    <div class="loader"></div>
+    <p>Sending your message...</p>
+  </div>
+ 
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
@@ -355,7 +361,7 @@
               <div class="card-footer">
                 <div class="post-author">
                   <a href="#">
-                    <img src="assets/img/propic2.jpeg" alt="" class="avatar rounded-circle">
+                    <img src="assets/img/proPic2.jpeg" alt="" class="avatar rounded-circle">
                     <span class="author">Mpho Kutoane</span>
                   </a>
                 </div>
@@ -386,7 +392,7 @@
               <div class="card-footer">
                 <div class="post-author">
                   <a href="#">
-                    <img src="assets/img/propic2.jpeg" alt="" class="avatar rounded-circle">
+                    <img src="assets/img/proPic2.jpeg" alt="" class="avatar rounded-circle">
                     <span class="author">Mpho Kutoane</span>
                   </a>
                 </div>
@@ -417,7 +423,7 @@
               <div class="card-footer">
                 <div class="post-author">
                   <a href="#">
-                    <img src="assets/img/propic2.jpeg" alt="" class="avatar rounded-circle">
+                    <img src="assets/img/proPic2.jpeg" alt="" class="avatar rounded-circle">
                     <span class="author">Mpho Kutoane</span>
                   </a>
                 </div>
@@ -446,84 +452,61 @@
                         Get in touch...
                       </h5>
                     </div>
-                    <div>
-                      <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-                        <div class="row">
-                          <div class="col-md-12 mb-3">
-                            <div class="form-group">
-                              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-                            </div>
-                          </div>
-                          <div class="col-md-12 mb-3">
-                            <div class="form-group">
-                              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-                            </div>
-                          </div>
-                          <div class="col-md-12 mb-3">
-                            <div class="form-group">
-                              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-                            </div>
-                          </div>
-                          <div class="col-md-12">
-                            <div class="form-group">
-                              <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-                            </div>
-                          </div>
-                          <div class="col-md-12 text-center my-3">
-                            <div class="loading">Loading</div>
-                            <div class="error-message"></div>
-                            <div class="sent-message">Your message has been sent. Thank you!</div>
-                          </div>
-                          <div class="col-md-12 text-center">
-                            <button type="submit" class="button button-a button-big button-rouded">Send Message</button>
-                          </div>
-                        </div>
-                      </form>
-                    </div>
+
+                    <form action="https://privatemailhandler.onrender.com/request" method="post" role="form" class="php-email-form">
+                      <div class="form-group">
+                        <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                      </div>
+                      <div class="form-group mt-3">
+                        <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                      </div>
+                      <div class="form-group mt-3">
+                        <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                      </div>
+                      <div class="form-group mt-3">
+                        <textarea class="form-control" name="message" id="message" rows="5" placeholder="Message" required></textarea>
+                      </div>
+                      <div class="my-3">
+                        <div class="loading">Loading</div>
+                        <div class="error-message"></div>
+                        <div class="sent-message">Your message has been sent. Thank you!</div>
+                      </div>
+                      <div class="text-center"><button type="submit">Send Message</button></div>
+                    </form>
+                    
                   </div>
                   <div class="col-md-6">
-                   <!--  <div class="title-box-2 pt-4 pt-md-0">
-                      <h5 class="title-left">
-                        Get in Touch
-                      </h5>
-                    </div> -->
-                    <!-- <div class="more-info">
-                      <p class="lead">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolorum dolorem soluta quidem
-                        expedita aperiam aliquid at.
-                        Totam magni ipsum suscipit amet? Autem nemo esse laboriosam ratione nobis
-                        mollitia inventore?
-                      </p>
-                      <ul class="list-ico">
-                        <li><span class="bi bi-geo-alt"></span> 329 WASHINGTON ST BOSTON, MA 02108</li>
-                        <li><span class="bi bi-phone"></span> (617) 557-0089</li>
-                        <li><span class="bi bi-envelope"></span> contact@example.com</li>
-                      </ul>
-                    </div> -->
-                    <div class="socials">
+                    <div class="row">
                       <div class="col-md-4">
-                    <div class="card  text-white bg-dark mb-3" align="center" style="max-width: 10rem;">
+                    <div class="card  text-white bg-dark mb-3" align="center" style="max-width: 7rem;">
                       <a href="https://github.com/mphoza223" target="_blank">
                         <img src="./assets/logos/github.png" class="miLogos mx-auto"></a>
+                        <p>Github</p>
                       </div>
                     </div>
 
                     <div class="col-md-4">
-                      <div class="card  text-white bg-dark mb-3" align="center" style="max-width: 10rem;">
-                         <a href="https://play.google.com/store/apps/developer?id=Mpho+Kutoane"><img src="./assets/logos/google-play.png" class="miLogos mx-auto"></a> 
-                         
+                      <div class="card  text-white bg-dark mb-3" align="center" style="max-width: 7rem;">
+                         <a href="https://play.google.com/store/apps/developer?id=Mpho+Kutoane"  target="_blank"><img src="./assets/logos/google-play.png" class="miLogos mx-auto"></a> 
+                         <p>Playstore</p>
                       </div>
                     </div>
-                    <!-- <div class="col-md-4">
-                      <div class="card  text-white bg-dark mb-3" align="center" style="max-width: 10rem;">
-                          <a href=""><img src="./assets/logos/linkedin.png" class="miLogos mx-auto"> </a>
-                          
+                    <div class="col-md-4">
+                      <div class="card  text-white bg-dark mb-3" align="center" style="max-width: 7rem;">
+                          <a href="https://www.linkedin.com/in/mpho-kutoane-244063121/"><img src="./assets/logos/linkedin.png" class="miLogos mx-auto"> </a>
+                          <p>Linkedin</p>
+                      </div>
+                    </div> 
+                     <!-- <div class="col-md-4">
+                      <div class="card  text-white bg-dark mb-3" align="center" style="max-width: 7rem;">
+                          <a href=""><img src="./assets/logos/x.png" class="miLogos mx-auto"></a>
+                          <p>X</p>
                       </div>
                     </div> -->
                     <div class="col-md-4">
-                      <div class="card  text-white bg-dark mb-3" align="center" style="max-width: 10rem;">
-                          <a href=""><img src="./assets/logos/x.png" class="miLogos mx-auto"></a>
-                          
+                      <div class="card  text-white bg-dark mb-3" align="center" style="max-width: 7rem;">
+                          <span onclick="alert('mphothedev@gmail.com')"><img src="./assets/logos/email.png" class="miLogos mx-auto"></span>
+                          <p>Email</p>
                       </div>
                     </div>
                         </div>
@@ -570,7 +553,7 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/typed.js/typed.umd.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
-
+  <script src='assets/js/jquery.min.js'></script>
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
